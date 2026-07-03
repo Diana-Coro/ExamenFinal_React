@@ -1,0 +1,264 @@
+
+.estado-page {
+    min-height: 100vh;
+    background: #f1f5f9 !important;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.estado-panel {
+    width: 1000px !important;
+    background: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+.estado-header {
+    background: linear-gradient(#0b1a4a, #071133) !important;
+    color: #ffffff !important;
+    text-align: center;
+    font-weight: bold;
+    padding: 16px !important;
+    font-size: 16px !important;
+    letter-spacing: 0.8px;
+}
+
+
+.estado-busqueda {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 12px !important;
+    padding: 24px !important;
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+}
+
+/* Input de búsqueda visible */
+.estado-busqueda input {
+    width: 250px !important;
+    padding: 10px 14px !important;
+    border: 1px solid #cbd5e1 !important;
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    color: #333333 !important;
+    border-radius: 6px !important;
+    font-size: 14px !important;
+    outline: none !important;
+}
+
+.estado-busqueda input::placeholder {
+    color: #94a3b8 !important;
+}
+
+
+.estado-busqueda button {
+    background: #0b1a4a !important;
+    color: #ffffff !important;
+    border: none !important;
+    padding: 10px 22px !important;
+    font-size: 13px !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+    border-radius: 6px !important;
+}
+
+.estado-busqueda button:hover {
+    background: #071133 !important;
+}
+
+
+.tabla-contenedor {
+    width: 92% !important;
+    margin: 24px auto !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #ffffff !important;
+}
+
+.estado-tabla {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    background: #ffffff !important;
+}
+
+
+.estado-tabla th {
+    background: #0b1a4a !important;
+    color: #ffffff !important;
+    padding: 14px 10px !important;
+    font-size: 13px !important;
+    font-weight: bold !important;
+    text-align: center !important;
+    border: 1px solid #071133 !important;
+}
+
+
+.estado-tabla td {
+    padding: 14px 10px !important;
+    border: 1px solid #e2e8f0 !important; /* Bordes sutiles entre celdas */
+    text-align: center !important;
+    font-size: 13px !important;
+    color: #334155 !important;
+}
+
+.estado-tabla tr {
+    cursor: pointer !important;
+}
+
+.estado-tabla tr:hover {
+    background: #f8fafc !important;
+}
+
+.fila-seleccionada {
+    background: #fee2e2 !important;
+    font-weight: bold !important;
+}
+
+
+.botones-panel {
+    width: 92% !important;
+    margin: 0 auto 24px auto !important;
+    padding: 16px !important;
+    display: flex !important;
+    justify-content: center !important;
+    gap: 14px !important;
+    border: 1px solid #e2e8f0 !important;
+    background: #f7f7f7 !important;
+    border-radius: 6px !important;
+}
+
+.botones-panel button {
+    background: #0b1a4a !important;
+    color: #ffffff !important;
+    border: none !important;
+    padding: 10px 24px !important;
+    font-size: 13px !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+    border-radius: 6px !important;
+}
+
+.botones-panel button:hover {
+    background: #071133 !important;
+}
+
+
+.modal-fondo {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: rgba(0, 0, 0, 0.4) !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    z-index: 100 !important;
+}
+
+.modal-caja {
+    width: 440px !important;
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.modal-header {
+    background: linear-gradient(#0b1a4a, #071133) !important;
+    color: #ffffff !important;
+    text-align: center !important;
+    font-weight: bold !important;
+    padding: 14px !important;
+    font-size: 14px !important;
+}
+
+.modal-formulario {
+    padding: 22px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    background-color: #f7f7f7 !important;
+}
+
+.modal-formulario label {
+    font-weight: bold !important;
+    color: #0b1a4a !important;
+    font-size: 13px !important;
+    margin-top: 4px;
+}
+
+.modal-formulario input {
+    padding: 10px !important;
+    border: 1px solid #ccc !important;
+    border-radius: 4px !important;
+    font-size: 13px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    background: #ffffff !important;
+    color: #333333 !important;
+}
+
+.modal-formulario input:disabled {
+    background: #e2e8f0 !important;
+    color: #64748b !important;
+}
+
+.modal-botones {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 15px !important;
+    padding: 10px 22px 22px 22px !important;
+    background-color: #f7f7f7 !important;
+}
+
+
+.modal-botones button[type="submit"] {
+    background: #d91d36 !important;
+    color: #ffffff !important;
+    border: none !important;
+    padding: 10px 26px !important;
+    font-size: 13px !important;
+    font-weight: bold !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+}
+
+.modal-botones button[type="submit"]:hover {
+    background: #b51227 !important;
+}
+
+
+.modal-botones button[type="button"] {
+    background: #0b1a4a !important;
+    color: #ffffff !important;
+    border: none !important;
+    padding: 10px 24px !important;
+    font-size: 13px !important;
+    font-weight: bold !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+}
+
+.modal-botones button[type="button"]:hover {
+    background: #071133 !important;
+}
+
+.modal-texto {
+    text-align: center !important;
+    padding: 25px 20px !important;
+    font-size: 14px !important;
+    color: #333333 !important;
+    margin: 0 !important;
+}
