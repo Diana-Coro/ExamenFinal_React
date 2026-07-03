@@ -1,0 +1,38 @@
+.institucion-container {
+  padding: 30px;
+}
+
+.institucion-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.institucion-form input {
+  padding: 10px;
+  width: 200px;
+}
+
+.institucion-form button,
+.institucion-table button {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.institucion-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.institucion-table th,
+.institucion-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.institucion-table th {
+  background-color: #282c34;
+  color: white;
+}
