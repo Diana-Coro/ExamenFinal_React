@@ -1,13 +1,41 @@
-import { apiInstitucion } from "../../api/apiInstitucion";
+import API_URL from "../api/apiInstitucion";
 
-export const listarInstituciones = () =>
-  apiInstitucion.get("");
+export const listarInstituciones = async () => {
+  const response = await fetch(API_URL);
+  return await response.json();
+};
 
-export const guardarInstitucion = (institucion) =>
-  apiInstitucion.post("", institucion);
+export const buscarInstitucionPorId = async (id) => {
+  const response = await fetch(`${API_URL}/${id}`);
+  return await response.json();
+};
 
-export const actualizarInstitucion = (id, institucion) =>
-  apiInstitucion.put(`/${id}`, institucion);
+export const guardarInstitucion = async (institucion) => {
+  const response = await fetch(API_URL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(institucion),
+  });
 
-export const eliminarInstitucion = (id) =>
-  apiInstitucion.delete(`/${id}`);
+  return await response.json();
+};
+
+export const actualizarInstitucion = async (id, institucion) => {
+  const response = await fetch(`${API_URL}/${id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(institucion),
+  });
+
+  return await response.json();
+};
+
+export const eliminarInstitucion = async (id) => {
+  await fetch(`${API_URL}/${id}`, {
+    method: "DELETE",
+  });
+};
