@@ -1,0 +1,89 @@
+.reporte-container {
+  max-width: 1000px;
+  margin: 20px auto;
+  background: white;
+  border: 1px solid #cfd8e3;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.reporte-container h1 {
+  margin: 0;
+  background: #0d1b4c;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 18px;
+}
+
+.reporte-buscar,
+.reporte-form {
+  padding: 25px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.reporte-buscar input,
+.reporte-form input {
+  width: 230px;
+  padding: 12px;
+  border: 1px solid #cfd8e3;
+  border-radius: 5px;
+}
+
+.reporte-buscar button,
+.reporte-form button,
+.reporte-acciones button {
+  background: #0d1b4c;
+  color: white;
+  border: none;
+  padding: 11px 24px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.reporte-table {
+  width: 92%;
+  margin: 25px auto;
+  border-collapse: collapse;
+  border: 1px solid #cfd8e3;
+}
+
+.reporte-table th {
+  background: #0d1b4c;
+  color: white;
+  padding: 14px;
+}
+
+.reporte-table td {
+  text-align: center;
+  padding: 14px;
+  border-bottom: 1px solid #ddd;
+  background: white;
+  color: #111;
+}
+
+.reporte-table tr:hover td {
+  background: #eef2ff;
+}
+
+.fila-seleccionada td {
+  background: #dfe6ff !important;
+}
+
+.reporte-acciones {
+  width: 92%;
+  margin: 25px auto;
+  padding: 16px;
+  border: 1px solid #dce3ec;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  background: #fafafa;
+}
