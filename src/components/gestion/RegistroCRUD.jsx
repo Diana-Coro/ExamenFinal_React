@@ -1,11 +1,27 @@
 import { useState } from "react";
 import "./Gestion.css";
 
-export default function RegistroCRUD({ title, fields, initialData = [] }) {
+export default function RegistroCRUD({
+  title = "Bienvenido al Sistema de Gestión",
+  fields = [],
+  initialData = [],
+}) {
   const emptyForm = Object.fromEntries(fields.map((f) => [f.key, ""]));
   const [items, setItems] = useState(initialData);
   const [form, setForm] = useState(emptyForm);
   const [editingId, setEditingId] = useState(null);
+
+  if (!fields || fields.length === 0) {
+    return (
+      <div className="inicio">
+        <h2>Bienvenido al Sistema de Gestión</h2>
+        <p>
+          Seleccione una opción del menú superior para administrar las tablas del
+          Seguro Social Universitario Potosí.
+        </p>
+      </div>
+    );
+  }
 
   const handleChange = (key, value) => {
     setForm((prev) => ({ ...prev, [key]: value }));
@@ -62,7 +78,8 @@ export default function RegistroCRUD({ title, fields, initialData = [] }) {
                 <option value="" disabled>
                   Selecciona...
                 </option>
-                {f.options.map((opt) => (
+
+                {(f.options || []).map((opt) => (
                   <option key={opt} value={opt}>
                     {opt}
                   </option>
@@ -121,6 +138,7 @@ export default function RegistroCRUD({ title, fields, initialData = [] }) {
                   {fields.map((f) => (
                     <td key={f.key}>{item[f.key]}</td>
                   ))}
+
                   <td className="registro__fila-acciones">
                     <button
                       className="btn-icono btn-icono--editar"
@@ -128,6 +146,7 @@ export default function RegistroCRUD({ title, fields, initialData = [] }) {
                     >
                       Editar
                     </button>
+
                     <button
                       className="btn-icono btn-icono--borrar"
                       onClick={() => handleDelete(item.id)}
