@@ -1,2 +1,3 @@
-const API_URL = "http://localhost:8080/api/pacientes";
+const API_URL = "https://examenfinal-backend-0nv3.onrender.com/api/pacientes";
+
 export default API_URL;

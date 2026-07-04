@@ -1,4 +1,4 @@
-.institucion-container {
+.enfermero-container {
   max-width: 1000px;
   margin: 20px auto;
   background: white;
@@ -7,7 +7,7 @@
   overflow: hidden;
 }
 
-.institucion-container h1 {
+.enfermero-container h1 {
   margin: 0;
   background: #0d1b4c;
   color: white;
@@ -16,7 +16,8 @@
   font-size: 18px;
 }
 
-.institucion-buscar {
+.enfermero-buscar,
+.enfermero-form {
   padding: 25px;
   display: flex;
   gap: 12px;
@@ -25,26 +26,17 @@
   border-bottom: 1px solid #ddd;
 }
 
-.institucion-buscar input,
-.institucion-form input {
+.enfermero-buscar input,
+.enfermero-form input {
   width: 230px;
   padding: 12px;
   border: 1px solid #cfd8e3;
   border-radius: 5px;
 }
 
-.institucion-form {
-  padding: 25px;
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  justify-content: center;
-  border-bottom: 1px solid #ddd;
-}
-
-.institucion-buscar button,
-.institucion-form button,
-.institucion-acciones button {
+.enfermero-buscar button,
+.enfermero-form button,
+.enfermero-acciones button {
   background: #0d1b4c;
   color: white;
   border: none;
@@ -54,20 +46,20 @@
   cursor: pointer;
 }
 
-.institucion-table {
+.enfermero-table {
   width: 92%;
   margin: 25px auto;
   border-collapse: collapse;
   border: 1px solid #cfd8e3;
 }
 
-.institucion-table th {
+.enfermero-table th {
   background: #0d1b4c;
   color: white;
   padding: 14px;
 }
 
-.institucion-table td {
+.enfermero-table td {
   text-align: center;
   padding: 14px;
   border-bottom: 1px solid #ddd;
@@ -75,15 +67,11 @@
   color: #111;
 }
 
-.institucion-table tr:hover td {
-  background: #eef2ff;
-}
-
 .fila-seleccionada td {
   background: #dfe6ff !important;
 }
 
-.institucion-acciones {
+.enfermero-acciones {
   width: 92%;
   margin: 25px auto;
   padding: 16px;
@@ -92,6 +80,5 @@
   display: flex;
   justify-content: center;
   gap: 14px;
-  flex-wrap: wrap;
   background: #fafafa;
 }

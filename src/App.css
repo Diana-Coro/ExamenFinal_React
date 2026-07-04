@@ -1,271 +1,147 @@
-.app {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+* {
+  box-sizing: border-box;
 }
 
-.app > main {
-  flex: 1;
-}
-
-.btn {
-  display: inline-block;
-  padding: 12px 22px;
-  border-radius: var(--radio);
-  font-weight: 700;
-  font-size: 0.9rem;
-}
-
-.btn--rojo {
-  background: var(--rojo);
-  color: var(--blanco);
-}
-
-.btn--rojo:hover {
-  background: #b81730;
-}
-
-.btn--azul {
-  background: var(--azul-marino);
-  color: var(--blanco);
-}
-
-.btn--azul:hover {
-  background: var(--azul-oscuro);
-}
-
-/* Novedades */
-.novedades {
-  padding: 40px 20px 10px;
-}
-
-.novedades__titulo {
-  color: var(--azul-marino);
-  border-bottom: 2px solid var(--azul-marino);
-  padding-bottom: 8px;
-  display: inline-block;
-  font-size: 1.4rem;
-}
-
-.novedades__aviso {
-  color: var(--rojo);
-  font-weight: 600;
-  margin-bottom: 24px;
-}
-
-.novedades__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-.novedad-card {
-  position: relative;
-  aspect-ratio: 1;
-  border-radius: var(--radio);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 18px;
-  color: var(--blanco);
-  font-weight: 800;
-  text-transform: uppercase;
-  font-size: 0.95rem;
-  line-height: 1.25;
-  background: linear-gradient(135deg, var(--rojo) 0%, var(--rojo) 40%, var(--morado) 55%, var(--gris-medio) 55%);
-  transition: transform 0.2s ease;
-}
-
-.novedad-card:hover {
-  transform: translateY(-4px);
-}
-
-.novedad-card--azul {
-  background: linear-gradient(135deg, var(--rojo) 0%, var(--rojo) 35%, var(--azul-marino) 50%, #eee 50%);
-}
-
-.novedad-card--gris {
-  background: linear-gradient(135deg, var(--rojo) 0%, var(--rojo) 35%, var(--azul-marino) 50%, #d5d5d5 50%);
-}
-
-.novedad-card__icon {
-  align-self: flex-end;
-  opacity: 0.9;
-}
-
-/* Ambulancia / servicios destacados */
-.ambulancia {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 32px;
-  align-items: center;
-  padding: 50px 20px;
-}
-
-.ambulancia__texto h2 {
-  color: var(--azul-marino);
-  font-size: 1.5rem;
-}
-
-.ambulancia__texto p {
-  line-height: 1.6;
-  margin-bottom: 18px;
-}
-
-.ambulancia__galeria {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-}
-
-.ambulancia__galeria span {
-  aspect-ratio: 4 / 3;
-  border-radius: var(--radio);
-  background: linear-gradient(135deg, var(--azul-marino), var(--verde));
-}
-
-.ambulancia__galeria span:nth-child(2) {
-  background: linear-gradient(135deg, var(--rojo), var(--morado));
-}
-
-.ambulancia__galeria span:nth-child(3) {
-  background: linear-gradient(135deg, var(--verde), var(--amarillo));
-}
-
-.ambulancia__galeria span:nth-child(4) {
-  background: linear-gradient(135deg, var(--morado), var(--azul-marino));
-}
-
-/* Autoridades */
-.autoridades {
-  padding: 20px 20px 50px;
-  text-align: center;
-  background: var(--gris-claro);
-  border-radius: var(--radio);
-}
-
-.autoridades h2 {
-  color: var(--azul-marino);
-}
-
-/* Médicos */
-.medicos {
-  padding: 50px 20px;
-}
-
-.medicos h2,
-.servicios h2 {
-  color: var(--azul-marino);
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.medicos__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-}
-
-.medico-card {
-  text-align: center;
-  padding: 24px 12px;
-  border: 1px solid var(--gris-medio);
-  border-radius: var(--radio);
-}
-
-.medico-card h3 {
-  font-size: 0.95rem;
-  margin: 12px 0 4px;
-  color: var(--azul-marino);
-}
-
-.medico-card p {
-  font-size: 0.85rem;
-  color: var(--gris-texto);
+body {
   margin: 0;
+  background: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.avatar {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background: var(--azul-marino);
-  color: var(--blanco);
+.app-topbar {
+  background: #1b1764;
+  color: white;
+  height: 18px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+}
+
+.app-header {
+  background: white;
+  height: 105px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
-  margin: 0 auto;
+  gap: 100px;
+  border-bottom: 3px solid #d7193f;
 }
 
-/* Servicios */
-.servicios {
-  padding: 10px 20px 60px;
+.app-logo {
+  width: 85px;
+  height: 85px;
+  border: 2px solid #1b1764;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 42px;
 }
 
-.servicios__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.servicio-card {
-  background: var(--azul-marino);
-  color: var(--blanco);
-  padding: 26px;
-  border-radius: var(--radio);
+.app-title {
   text-align: center;
-  font-weight: 700;
-  border-left: 5px solid var(--rojo);
+  color: #1b1764;
 }
 
-/* Institucional / About */
-.institucional {
-  padding: 40px 20px 60px;
+.app-title h1,
+.app-title h2 {
+  margin: 0;
+  font-size: 38px;
+  font-weight: 900;
+  letter-spacing: 2px;
 }
 
-.institucional__titulo {
-  color: var(--azul-marino);
-  border-bottom: 2px solid var(--rojo);
-  padding-bottom: 10px;
-  display: inline-block;
+.app-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font-weight: bold;
 }
 
-.institucional__layout {
-  display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 32px;
-  margin-top: 24px;
+.app-escudo {
+  font-size: 48px;
 }
 
-.institucional__contenido section {
-  margin-bottom: 32px;
+.app-right p {
+  margin: 8px 0;
 }
 
-.institucional__contenido h2 {
-  color: var(--azul-marino);
-  font-size: 1.15rem;
-  border-left: 4px solid var(--rojo);
-  padding-left: 12px;
+.verde {
+  color: #138a35;
 }
 
-.institucional__contenido p {
-  line-height: 1.7;
+.azul {
+  color: #1166c2;
 }
 
-@media (max-width: 900px) {
-  .novedades__grid,
-  .medicos__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .ambulancia {
-    grid-template-columns: 1fr;
-  }
-  .servicios__grid {
-    grid-template-columns: 1fr;
-  }
-  .institucional__layout {
-    grid-template-columns: 1fr;
-  }
+.rojo {
+  color: #d7193f;
+}
+
+.app-navbar {
+  background: white;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 38px;
+  border-bottom: 1px solid #ddd;
+}
+
+.app-navbar a {
+  color: #111;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 13px 0;
+}
+
+.app-navbar a:hover {
+  color: #d7193f;
+  border-bottom: 3px solid #d7193f;
+}
+
+.app-content {
+  max-width: 1050px;
+  margin: 25px auto;
+  min-height: 420px;
+}
+
+.app-footer {
+  background: #1b1764;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 35px 8%;
+  margin-top: 40px;
+}
+
+.app-footer h3 {
+  font-size: 16px;
+  border-bottom: 2px solid #d7193f;
+  padding-bottom: 8px;
+}
+
+.app-footer p {
+  font-size: 14px;
+}
+
+.app-footer button {
+  background: #312c82;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  margin-right: 10px;
+  border-radius: 3px;
+}
+
+.app-copy {
+  background: #1b1764;
+  color: white;
+  text-align: center;
+  border-top: 1px solid #39358b;
+  padding: 20px;
+  font-size: 13px;
 }

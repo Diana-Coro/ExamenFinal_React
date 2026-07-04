@@ -1,40 +1,40 @@
-import API_URL from "../api/apiAfiliado";
+import API_URL from "../api/apiEnfermero";
 
-export const listarAfiliados = async () => {
+export const listarEnfermeros = async () => {
   const response = await fetch(API_URL);
   return await response.json();
 };
 
-export const buscarAfiliadoPorId = async (id) => {
+export const buscarEnfermeroPorId = async (id) => {
   const response = await fetch(`${API_URL}/${id}`);
   return await response.json();
 };
 
-export const guardarAfiliado = async (afiliado) => {
+export const guardarEnfermero = async (enfermero) => {
   const response = await fetch(API_URL, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(afiliado),
+    body: JSON.stringify(enfermero),
   });
 
   return await response.json();
 };
 
-export const actualizarAfiliado = async (id, afiliado) => {
+export const actualizarEnfermero = async (id, enfermero) => {
   const response = await fetch(`${API_URL}/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(afiliado),
+    body: JSON.stringify(enfermero),
   });
 
   return await response.json();
 };
 
-export const eliminarAfiliado = async (id) => {
+export const eliminarEnfermero = async (id) => {
   await fetch(`${API_URL}/${id}`, {
     method: "DELETE",
   });

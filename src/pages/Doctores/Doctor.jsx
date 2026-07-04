@@ -5,7 +5,7 @@ import {
   guardarDoctor,
   actualizarDoctor,
   eliminarDoctor,
-} from "../services/doctorService";
+} from "../../services/doctorService";
 import "./Doctor.css";
 
 function Doctor() {

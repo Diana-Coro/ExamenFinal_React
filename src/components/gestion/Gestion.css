@@ -1,167 +1,122 @@
-.registro__titulo {
-  color: var(--azul-marino);
-  font-size: 1.3rem;
-  margin-bottom: 18px;
-  border-left: 4px solid var(--rojo);
-  padding-left: 12px;
+* {
+  box-sizing: border-box;
 }
 
-.registro__form {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 16px;
-  background: var(--gris-claro);
-  border-radius: var(--radio);
-  padding: 20px;
-  margin-bottom: 28px;
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
 }
 
-.registro__campo {
+.barra-superior {
+  background: #1b1764;
+  color: white;
+  padding: 3px 8%;
   display: flex;
-  flex-direction: column;
-  gap: 6px;
+  gap: 35px;
+  font-size: 13px;
 }
 
-.registro__campo label {
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: var(--azul-marino);
-}
-
-.registro__campo input,
-.registro__campo select {
-  padding: 9px 10px;
-  border: 1px solid var(--gris-medio);
-  border-radius: var(--radio);
-  font-size: 0.9rem;
-  font-family: inherit;
-  background: var(--blanco);
-}
-
-.registro__campo input:focus,
-.registro__campo select:focus {
-  border-color: var(--azul-marino);
-}
-
-.registro__acciones-form {
-  grid-column: 1 / -1;
+.encabezado {
+  height: 110px;
   display: flex;
-  gap: 12px;
   align-items: center;
+  justify-content: space-around;
+  border-bottom: 3px solid #c91535;
+  background: white;
 }
 
-.btn--outline {
-  background: transparent;
-  border: 1px solid var(--azul-marino);
-  color: var(--azul-marino);
+.logo-cuadro {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #1b1764;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 45px;
 }
 
-.btn--outline:hover {
-  background: var(--azul-marino);
-  color: var(--blanco);
-}
-
-.registro__tabla-wrap {
-  overflow-x: auto;
-  border: 1px solid var(--gris-medio);
-  border-radius: var(--radio);
-}
-
-.registro__tabla {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.88rem;
-}
-
-.registro__tabla th {
-  background: var(--azul-marino);
-  color: var(--blanco);
-  text-align: left;
-  padding: 10px 12px;
-  white-space: nowrap;
-}
-
-.registro__tabla td {
-  padding: 10px 12px;
-  border-top: 1px solid var(--gris-medio);
-}
-
-.registro__tabla tbody tr:hover {
-  background: var(--gris-claro);
-}
-
-.registro__vacio {
+.titulo {
   text-align: center;
-  color: #888;
-  padding: 24px 12px !important;
+  color: #17145f;
 }
 
-.registro__fila-acciones {
+.titulo h1,
+.titulo h2 {
+  margin: 0;
+  font-size: 42px;
+  font-weight: 900;
+}
+
+.acciones {
+  color: #1164b4;
+  font-weight: bold;
+}
+
+.menu {
+  height: 52px;
   display: flex;
-  gap: 8px;
-  white-space: nowrap;
+  justify-content: center;
+  gap: 45px;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  background: white;
 }
 
-.btn-icono {
-  border: none;
-  border-radius: var(--radio);
-  padding: 6px 10px;
-  font-size: 0.78rem;
-  font-weight: 700;
+.menu a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
 }
 
-.btn-icono--editar {
-  background: #e7edfb;
-  color: var(--azul-marino);
+.menu a:hover {
+  color: #c91535;
 }
 
-.btn-icono--editar:hover {
-  background: var(--azul-marino);
-  color: var(--blanco);
+.contenido {
+  min-height: 300px;
+  padding: 40px 8%;
+  background: #ffffff;
 }
 
-.btn-icono--borrar {
-  background: #fbe7ea;
-  color: var(--rojo);
+.inicio {
+  text-align: center;
+  padding: 50px 20px;
 }
 
-.btn-icono--borrar:hover {
-  background: var(--rojo);
-  color: var(--blanco);
+.inicio h2 {
+  color: #17145f;
+  font-size: 32px;
 }
 
-/* Tabs de la página Gestión */
-.gestion__tabs {
+.footer {
+  background: #1b1764;
+  color: white;
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 24px 0 30px;
-  border-bottom: 2px solid var(--gris-medio);
-  padding-bottom: 0;
+  justify-content: space-around;
+  padding: 35px 8%;
 }
 
-.gestion__tab {
-  padding: 10px 16px;
+.footer h3 {
+  border-bottom: 2px solid #e51a3f;
+  padding-bottom: 8px;
+}
+
+.footer button {
+  background: #302b82;
+  color: white;
   border: none;
-  background: transparent;
-  font-weight: 700;
-  font-size: 0.88rem;
-  color: #555;
-  border-bottom: 3px solid transparent;
-  margin-bottom: -2px;
+  padding: 10px 15px;
+  margin-right: 10px;
+  border-radius: 3px;
 }
 
-.gestion__tab:hover {
-  color: var(--rojo);
-}
-
-.gestion__tab--active {
-  color: var(--rojo);
-  border-bottom-color: var(--rojo);
-}
-
-@media (max-width: 700px) {
-  .registro__form {
-    grid-template-columns: 1fr;
-  }
+.copy {
+  background: #1b1764;
+  color: white;
+  text-align: center;
+  border-top: 1px solid #39358b;
+  padding: 25px;
+  font-size: 13px;
 }
