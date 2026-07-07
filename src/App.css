@@ -1,4 +1,4 @@
-* {
+
   box-sizing: border-box;
 }
 
@@ -8,10 +8,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+
 .app-topbar {
   background: #1b1764;
   color: white;
-  height: 18px;
+  height: auto;
+  padding: 20px 20px;
   font-size: 12px;
   display: flex;
   justify-content: center;
@@ -19,66 +21,158 @@ body {
   gap: 35px;
 }
 
+
 .app-header {
   background: white;
-  height: 105px;
+  height: auto;
+  padding: 0px 40px 45px 40px !important;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 100px;
+  align-items: flex-start !important;
+  justify-content: space-between;
   border-bottom: 3px solid #d7193f;
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
 }
 
 .app-logo {
-  width: 85px;
-  height: 85px;
-  border: 2px solid #1b1764;
-  border-radius: 6px;
+  width: 100px;
+  height: 100px;
+  border: none !important;
+  background-color: transparent !important;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 42px;
+  padding: 0px;
+  margin-top: 25px !important;
 }
+
+.app-logo img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
 
 .app-title {
   text-align: center;
   color: #1b1764;
+  flex: 1;
+  margin-top: 10px !important;
+  margin-bottom: 0 !important;
 }
 
 .app-title h1,
 .app-title h2 {
-  margin: 0;
-  font-size: 38px;
-  font-weight: 900;
-  letter-spacing: 2px;
+  color: #1b1764 !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 34px !important;
+  font-weight: 800 !important;
+  letter-spacing: 1px !important;
+  line-height: 1.25 !important;
+  margin: 0 !important;
 }
+
+
 
 .app-right {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-  font-weight: bold;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 15px !important;
+  min-width: 280px !important;
+  margin-top: 15px !important;
 }
 
-.app-escudo {
-  font-size: 48px;
+
+.app-escudo-img {
+  width: 90px !important;
+  height: auto !important;
+  display: block !important;
+
+
+  margin-right: 150px !important;
 }
 
-.app-right p {
-  margin: 8px 0;
+
+
+.app-actions-block, .app-main-actions {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  gap: 20px !important;
 }
 
-.verde {
-  color: #138a35;
+
+.action-item-box, .convocatorias-wrapper, .reservas-wrapper {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex: 1 !important;
 }
 
-.azul {
-  color: #1166c2;
+
+.reservas-wrapper {
+  margin-top: 15px !important;
 }
 
-.rojo {
-  color: #d7193f;
+
+.app-convocatorias-img {
+  width: 95px !important;
+  height: auto !important;
+  object-fit: contain !important;
+  display: block !important;
 }
+
+
+.azul-marino-link {
+  color: #1b1764 !important;
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  margin: 6px 0 0 0 !important;
+  white-space: nowrap !important;
+}
+
+
+.spinner-puntos-loading {
+  width: 28px;
+  height: 28px;
+  border: 3px dashed #d7193f !important;
+  border-top: 3px dashed transparent !important;
+  border-radius: 50% !important;
+  display: block !important;
+  margin-bottom: 8px !important;
+
+
+  animation: girarSpinner 1.5s linear infinite;
+}
+
+
+@keyframes girarSpinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rojo-link, .app-right p.rojo {
+
+
+  color: #d7193f !important;
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  margin: 15px 125px 0px 0px !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+}
+
 
 .app-navbar {
   background: white;
@@ -145,3 +239,4 @@ body {
   padding: 20px;
   font-size: 13px;
 }
+

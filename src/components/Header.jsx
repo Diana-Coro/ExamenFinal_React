@@ -10,6 +10,7 @@ function IconTelefono() {
     </svg>
   )
 }
+
 function IconCorreo() {
   return (
     <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -17,6 +18,7 @@ function IconCorreo() {
     </svg>
   )
 }
+
 function IconUbicacion() {
   return (
     <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -24,15 +26,17 @@ function IconUbicacion() {
     </svg>
   )
 }
+
 function IconMegafono() {
   return (
-    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
-      <path d="M3 10v4h3l6 4V6l-6 4H3z" />
-      <path d="M15 8a5 5 0 0 1 0 8" />
-      <path d="M18 5a9 9 0 0 1 0 14" />
+    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+      <path d="M3 10v4h3l6 4V6l-6 4H3z" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M15 8a5 5 0 0 1 0 8" strokeLinecap="round"/>
+      <path d="M18 5a9 9 0 0 1 0 14" strokeLinecap="round"/>
     </svg>
   )
 }
+
 function IconCampana() {
   return (
     <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -43,7 +47,8 @@ function IconCampana() {
 
 export default function Header() {
   return (
-    <header className="header">
+    <header className="header" style={{ height: 'auto', minHeight: 'auto' }}>
+
       <div className="header__topbar">
         <div className="container header__topbar-inner">
           <a href="tel:+59126224161" className="header__topbar-item">
@@ -61,31 +66,68 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="container header__main">
+
+      <div
+        className="header__main"
+        style={{
+          height: 'auto',
+          maxHeight: 'none',
+          paddingTop: '50px',
+          paddingBottom: '45px',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          width: '100%',
+          maxWidth: '1300px',
+          margin: '0 auto'
+        }}
+      >
+
         <Link to="/" className="header__brand">
           <img src={logo} alt="Logo Seguro Social Universitario Potosí" className="header__logo" />
         </Link>
 
-        <Link to="/" className="header__title">
-          <h1>SEGURO SOCIAL<br />UNIVERSITARIO POTOSÍ</h1>
-        </Link>
 
-        <img src={escudo} alt="Escudo de Bolivia" className="header__escudo" />
+        <div className="header__title">
+          <h1 style={{ fontSize: '2.4rem', lineHeight: '1.2', margin: 0 }}>
+            SEGURO SOCIAL<br />UNIVERSITARIO POTOSÍ
+          </h1>
+        </div>
 
-        <div className="header__actions">
-          <a href="#reservas" className="header__action header__action--reservas">
-            <IconMegafono />
-            <span>Reservas</span>
-          </a>
-          <a href="#convocatorias" className="header__action header__action--link">
-            CONVOCATORIAS
-          </a>
-          <a href="#redes" className="header__action header__action--follow">
-            <IconCampana />
-            <span>Síguenos</span>
-          </a>
+
+        <div className="header__right-block" style={{ height: 'auto', minHeight: 'auto' }}>
+          <img src={escudo} alt="Escudo de Bolivia" className="header__escudo" />
+
+          <div className="header__actions">
+
+            <div className="header__action-group">
+              <span className="header__icon-wrapper">
+                <IconMegafono />
+              </span>
+              <a href="#convocatorias" className="header__action-link">
+                CONVOCATORIAS
+              </a>
+            </div>
+
+
+            <div className="header__action-group">
+              <span className="header__icon-spinner">
+                ⏳
+              </span>
+              <a href="#reservas" className="header__action-link header__action-link--reservas">
+                Reservas
+              </a>
+            </div>
+
+
+            <a href="#redes" className="header__action-follow">
+              <IconCampana />
+              <span>Síguenos</span>
+            </a>
+          </div>
         </div>
       </div>
+      <div className="header__bottom-line"></div>
     </header>
   )
 }

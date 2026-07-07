@@ -1,6 +1,6 @@
 import { Routes, Route, Link, Outlet } from "react-router-dom";
 import "./App.css";
-
+import escudoBolivia from "./assets/escudo.png";
 import RegistroCRUD from "./components/gestion/RegistroCRUD";
 import Doctor from "./pages/Doctores/Doctor";
 import Institucion from "./pages/Institucion/Institucion";
@@ -8,6 +8,9 @@ import Pacientes from "./pages/Pacientes/Pacientes";
 import Reporte from "./pages/Reportes/Reporte";
 import Afiliado from "./pages/Afiliados/Afiliado";
 import Enfermero from "./pages/Enfermeros/Enfermero";
+import logoSSU from "./assets/logo.png";
+import imgConvocatorias from "./assets/img.png";
+
 
 function LayoutApp() {
   return (
@@ -19,21 +22,47 @@ function LayoutApp() {
       </div>
 
       <header className="app-header">
-        <div className="app-logo">🏥</div>
+        <div className="app-logo">
+          <img src={logoSSU} alt="Logo SSU" />
+        </div>
+
 
         <div className="app-title">
           <h1>SEGURO SOCIAL</h1>
           <h2>UNIVERSITARIO POTOSÍ</h2>
         </div>
 
-        <div className="app-right">
-          <div className="app-escudo">🇧🇴</div>
-          <div>
-            <p className="verde">🔊 Reservas</p>
-            <p className="azul">CONVOCATORIAS</p>
-            <p className="rojo">🔔 Síguenos</p>
-          </div>
-        </div>
+
+                      <div className="app-right">
+
+
+                        <img src={escudoBolivia} alt="Escudo de Bolivia" className="app-escudo-img" />
+
+
+                        <div className="app-main-actions">
+
+
+                          <div className="convocatorias-wrapper">
+                            <img src={imgConvocatorias} alt="CONVOCATORIAS" className="app-convocatorias-img" />
+                          </div>
+
+
+                        <div className="reservas-wrapper">
+
+                          <div className="spinner-puntos-loading"></div>
+                          <p className="azul-marino-link">Reservas</p>
+                        </div>
+
+
+                        </div>
+
+
+                        <p className="rojo-link">🔔 Síguenos</p>
+
+                      </div>
+
+
+
       </header>
 
       <nav className="app-navbar">
