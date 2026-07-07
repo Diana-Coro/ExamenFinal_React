@@ -23,13 +23,34 @@
   flex-shrink: 0;
 }
 
-.header__main {
-  display: grid;
-  grid-template-columns: auto 1fr auto auto;
-  align-items: start;
-  gap: 32px;
-  padding: 28px 20px 20px;
+
+ .header__main {
+  background: white;
+  height: auto;
+  padding: 40px 40px 40px 40px;
+
+  display: flex;
+
+
+  align-items: flex-start !important;
+
+  justify-content: center;
+  gap: 100px;
+  border-bottom: 3px solid #d7193f;
 }
+
+
+.header__title h1 {
+  font-family: var(--font-titulo);
+
+
+  font-size: 3.2rem !important;
+  line-height: 1.25 !important;
+  color: var(--azul-marino);
+  font-weight: 800;
+  margin: 0;
+}
+
 
 .header__logo {
   width: 110px;
@@ -41,8 +62,8 @@
 }
 
 .header__title {
-  align-self: center;
-  justify-self: center;
+  flex: 1;
+  text-align: center;
 }
 
 .header__title h1 {
@@ -50,54 +71,92 @@
   font-size: 2.6rem;
   line-height: 1.25;
   color: var(--azul-marino);
-  font-weight: 800;
+
+
+  font-weight: 100;
+
   margin: 0;
-  text-align: center;
+}
+
+
+
+
+.header__right-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 140px;
 }
 
 .header__escudo {
   width: 100px;
   height: auto;
-  justify-self: end;
-  align-self: center;
+  margin-bottom: 12px;
 }
+
 
 .header__actions {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
-  padding-top: 10px;
-  align-self: center;
-}
-
-.header__action {
-  display: flex;
   flex-direction: row;
+  align-items: flex-end;
+  gap: 36px;
+  position: relative;
+}
+
+
+.header__action-group {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 8px;
   color: var(--verde);
-  font-size: 1.05rem;
-  font-weight: 700;
 }
 
-.header__action svg {
-  width: 26px;
-  height: 26px;
+.header__icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.header__action--link {
+.header__icon-wrapper svg {
+  width: 32px;
+  height: 32px;
+}
+
+.header__action-text {
   color: #1e6fbf;
-  font-size: 1.1rem;
-  letter-spacing: 0.02em;
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  margin-top: 4px;
 }
 
-.header__action--follow {
+
+.header__action-sub {
+  color: var(--azul-marino);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  padding-bottom: 2px;
+}
+
+
+.header__action-follow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   color: var(--rojo);
-  font-size: 1.05rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  margin-top: 8px;
+  width: 100%;
+  justify-content: center;
 }
 
-/* ---- NavBar (no tiene NavBar.css propio; vive aquí junto al Header) ---- */
+
 .navbar {
   border-top: 3px solid var(--rojo);
   border-bottom: 1px solid var(--gris-medio);
@@ -158,6 +217,25 @@
 }
 
 @media (max-width: 900px) {
+  .header__main {
+    flex-direction: column;
+    gap: 16px;
+    padding: 15px;
+  }
+
+  .header__right-block {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    min-height: auto;
+  }
+
+  .header__actions {
+    flex-direction: row;
+    gap: 16px;
+  }
+
   .navbar__toggle {
     display: block;
     margin: 10px 20px;
@@ -183,16 +261,18 @@
   }
 }
 
-@media (max-width: 900px) {
-  .header__main {
-    grid-template-columns: auto 1fr;
-    grid-template-areas:
-      "logo escudo"
-      "title title"
-      "actions actions";
-  }
-  .header__brand { grid-area: logo; }
-  .header__escudo { grid-area: escudo; justify-self: end; }
-  .header__title { grid-area: title; }
-  .header__actions { grid-area: actions; flex-direction: row; justify-content: center; gap: 20px; }
+.header__actions a,
+.header__action-group,
+.header__action-text,
+.header__action-sub,
+.header__action-follow {
+  cursor: pointer !important;
 }
+
+.header__actions a:hover,
+.header__action-group:hover {
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+
